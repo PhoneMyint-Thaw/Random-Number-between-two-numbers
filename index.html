@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 30%;
+            height: auto;
+            margin: auto;
+            border: 1px solid red;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        input{
+            padding: 20px;
+            margin: 20px;
+            width: 80%;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 20px;
+        }
+        .result {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="" id="firstNumber" placeholder="First Number"> <br>
+        <input type="number" name="" id="secondNumber" placeholder="SecondNumber"> <br>
+        <button type="button"class="button"> Generate</button>
+        <div class="result"></div>
+    </form>
+
+    <script>
+        document.querySelector(".button").onclick = function () {
+            var min = document.querySelector("#firstNumber").value;
+            var max = document.querySelector("#secondNumber").value;
+            var result = Math.floor( Math.random() * ( max - min + 1) + min);
+            document.querySelector(".result").innerHTML = "Random number is " + result;
+        }
+    </script>
+</body>
+</html>
